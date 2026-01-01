@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Muzoon Replica</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.svg" alt="Logo" class="logo">
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+
+                <li class="nav-item">
+                    <div class="accordion-header">
+                        <span class="nav-text">ABOUT</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We are a leading company in the region...</p>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="accordion-header">
+                        <span class="nav-text">CONTACT</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Get in touch with us.</p>
+                        <!-- Button moved to top level -->
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" id="openModalBtn" class="nav-link">
+                        <span class="nav-text">FOR INVESTMENT ENQUIRIES</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="bg-container">
+        <!-- Background image is set in CSS or via img tag if specific positioning needed -->
+        <img src="background.jpg" alt="City Skyline" id="bg-image">
+    </div>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" class="form-input">
+                <input type="email" placeholder="Email" class="form-input">
+                <textarea placeholder="Message" class="form-input" rows="4"></textarea>
+                <button type="submit" class="simple-btn submit-btn">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

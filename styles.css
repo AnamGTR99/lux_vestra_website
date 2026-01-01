@@ -1,0 +1,187 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    /* Minimalist sans-serif */
+    height: 100vh;
+    overflow: hidden;
+    /* Prevent scroll if content fits */
+    position: relative;
+}
+
+/* Layout */
+header {
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    width: 300px;
+    /* Fixed width for the sidebar/nav area */
+    z-index: 100;
+    text-align: right;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+    filter: grayscale(100%);
+    /* Ensure 100% B&W */
+}
+
+/* Navigation */
+.nav-list {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    /* Subtle separator */
+    padding-bottom: 5px;
+}
+
+.nav-link,
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.accordion-header:hover {
+    color: #ccc;
+}
+
+.chevron {
+    font-size: 10px;
+    transition: transform 0.3s;
+}
+
+.active .chevron {
+    transform: rotate(90deg);
+}
+
+/* Accordion Content (Smooth Dropdown) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    font-size: 13px;
+    color: #aaa;
+    text-align: right;
+}
+
+.accordion-content p {
+    padding: 10px 0;
+}
+
+/* Buttons */
+.simple-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.simple-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Background Image */
+.bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    /* Center vertical */
+    justify-content: center;
+    pointer-events: none;
+}
+
+#bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the entire area */
+    object-position: center;
+    opacity: 0.8;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #222;
+    border: 1px solid #444;
+    color: white;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
